@@ -1,0 +1,31 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1794190687386,41,00 Consultar tarifas,200,OK,Usuarios comprando 1-1,text,true,,472,160,1,1,http://localhost:8080/api/tarifas,41,0,33
+1794190687432,4,01 Seleccion de boletas,201,Created,Usuarios comprando 1-1,text,true,,272,216,1,1,http://localhost:8080/api/seleccion,4,0,3
+1794190687480,3,02 Pago de la reserva,200,OK,Usuarios comprando 1-1,text,true,,289,224,1,1,http://localhost:8080/api/pago,2,0,1
+1794190688230,3,00 Consultar tarifas,200,OK,Usuarios comprando 1-2,text,true,,472,160,1,1,http://localhost:8080/api/tarifas,3,0,1
+1794190688234,3,01 Seleccion de boletas,201,Created,Usuarios comprando 1-2,text,true,,274,216,1,1,http://localhost:8080/api/seleccion,3,0,1
+1794190688239,3,02 Pago de la reserva,200,OK,Usuarios comprando 1-2,text,true,,290,224,1,1,http://localhost:8080/api/pago,3,0,1
+1794190689226,3,00 Consultar tarifas,200,OK,Usuarios comprando 1-3,text,true,,472,160,1,1,http://localhost:8080/api/tarifas,3,0,1
+1794190689230,3,01 Seleccion de boletas,201,Created,Usuarios comprando 1-3,text,true,,277,219,1,1,http://localhost:8080/api/seleccion,3,0,2
+1794190689235,4,02 Pago de la reserva,200,OK,Usuarios comprando 1-3,text,true,,293,224,1,1,http://localhost:8080/api/pago,4,0,2
+1794190690225,3,00 Consultar tarifas,200,OK,Usuarios comprando 1-4,text,true,,472,160,1,1,http://localhost:8080/api/tarifas,3,0,2
+1794190690230,2,01 Seleccion de boletas,201,Created,Usuarios comprando 1-4,text,true,,277,219,1,1,http://localhost:8080/api/seleccion,2,0,1
+1794190690234,3,02 Pago de la reserva,200,OK,Usuarios comprando 1-4,text,true,,293,224,1,1,http://localhost:8080/api/pago,3,0,1
+1794190691223,3,00 Consultar tarifas,200,OK,Usuarios comprando 1-5,text,true,,472,160,1,1,http://localhost:8080/api/tarifas,3,0,1
+1794190691227,2,01 Seleccion de boletas,201,Created,Usuarios comprando 1-5,text,true,,279,221,1,1,http://localhost:8080/api/seleccion,2,0,1
+1794190691230,3,02 Pago de la reserva,200,OK,Usuarios comprando 1-5,text,true,,295,224,1,1,http://localhost:8080/api/pago,2,0,1
+1794190692221,3,00 Consultar tarifas,200,OK,Usuarios comprando 1-6,text,true,,472,160,1,1,http://localhost:8080/api/tarifas,3,0,1
+1794190692225,3,01 Seleccion de boletas,201,Created,Usuarios comprando 1-6,text,true,,269,212,1,1,http://localhost:8080/api/seleccion,3,0,1
+1794190692230,3,02 Pago de la reserva,200,OK,Usuarios comprando 1-6,text,true,,286,224,1,1,http://localhost:8080/api/pago,2,0,1
+1794190693221,3,00 Consultar tarifas,200,OK,Usuarios comprando 1-7,text,true,,472,160,1,1,http://localhost:8080/api/tarifas,3,0,1
+1794190693225,4,01 Seleccion de boletas,201,Created,Usuarios comprando 1-7,text,true,,270,212,1,1,http://localhost:8080/api/seleccion,3,0,1
+1794190693230,3,02 Pago de la reserva,200,OK,Usuarios comprando 1-7,text,true,,287,224,1,1,http://localhost:8080/api/pago,3,0,1
+1794190694218,4,00 Consultar tarifas,200,OK,Usuarios comprando 1-8,text,true,,472,160,1,1,http://localhost:8080/api/tarifas,4,0,2
+1794190694223,4,01 Seleccion de boletas,201,Created,Usuarios comprando 1-8,text,true,,274,216,1,1,http://localhost:8080/api/seleccion,3,0,1
+1794190694228,3,02 Pago de la reserva,200,OK,Usuarios comprando 1-8,text,true,,290,224,1,1,http://localhost:8080/api/pago,3,0,1
+1794190695216,3,00 Consultar tarifas,200,OK,Usuarios comprando 1-9,text,true,,472,160,1,1,http://localhost:8080/api/tarifas,3,0,1
+1794190695220,4,01 Seleccion de boletas,201,Created,Usuarios comprando 1-9,text,true,,277,219,1,1,http://localhost:8080/api/seleccion,3,0,2
+1794190695225,4,02 Pago de la reserva,200,OK,Usuarios comprando 1-9,text,true,,293,224,1,1,http://localhost:8080/api/pago,3,0,1
+1794190696217,4,00 Consultar tarifas,200,OK,Usuarios comprando 1-10,text,true,,472,160,1,1,http://localhost:8080/api/tarifas,3,0,1
+1794190696222,3,01 Seleccion de boletas,201,Created,Usuarios comprando 1-10,text,true,,279,221,1,1,http://localhost:8080/api/seleccion,3,0,1
+1794190696227,3,02 Pago de la reserva,200,OK,Usuarios comprando 1-10,text,true,,295,224,1,1,http://localhost:8080/api/pago,3,0,1

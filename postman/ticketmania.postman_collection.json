@@ -1,0 +1,25 @@
+{
+  "info": {"name": "TicketMania API simple", "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"},
+  "variable": [{"key": "base", "value": "http://localhost:8080"}, {"key": "reserva", "value": ""}],
+  "item": [
+    {"name": "Salud", "request": {"method": "GET", "url": "{{base}}/api/salud"},
+     "event": [{"listen": "test", "script": {"exec": ["pm.test('200 OK', () => pm.response.to.have.status(200));"]}}]},
+    {"name": "Tarifas", "request": {"method": "GET", "url": "{{base}}/api/tarifas"},
+     "event": [{"listen": "test", "script": {"exec": ["pm.test('200', () => pm.response.to.have.status(200));", "pm.test('4 tarifas', () => pm.expect(pm.response.json().tarifas.length).to.eql(4));"]}}]},
+    {"name": "1 - Seleccion", "request": {"method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}],
+      "url": "{{base}}/api/seleccion", "body": {"mode": "raw", "raw": "{\"tarifa\":\"general\",\"cantidad\":2}"}},
+     "event": [{"listen": "test", "script": {"exec": ["pm.test('201', () => pm.response.to.have.status(201));", "pm.collectionVariables.set('reserva', pm.response.json().reserva);", "pm.test('total 160000', () => pm.expect(pm.response.json().total).to.eql(160000));"]}}]},
+    {"name": "2 - Pago", "request": {"method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}],
+      "url": "{{base}}/api/pago", "body": {"mode": "raw", "raw": "{\"reserva\":\"{{reserva}}\"}"}},
+     "event": [{"listen": "test", "script": {"exec": ["pm.test('200', () => pm.response.to.have.status(200));", "pm.test('APROBADO', () => pm.expect(pm.response.json().estado).to.eql('APROBADO'));"]}}]},
+    {"name": "Negativo - pagar reserva ya consumida", "request": {"method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}],
+      "url": "{{base}}/api/pago", "body": {"mode": "raw", "raw": "{\"reserva\":\"{{reserva}}\"}"}},
+     "event": [{"listen": "test", "script": {"exec": ["pm.test('404', () => pm.response.to.have.status(404));"]}}]},
+    {"name": "Negativo - tarifa inexistente", "request": {"method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}],
+      "url": "{{base}}/api/seleccion", "body": {"mode": "raw", "raw": "{\"tarifa\":\"palco\",\"cantidad\":1}"}},
+     "event": [{"listen": "test", "script": {"exec": ["pm.test('400', () => pm.response.to.have.status(400));"]}}]},
+    {"name": "Negativo - cantidad 0", "request": {"method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}],
+      "url": "{{base}}/api/seleccion", "body": {"mode": "raw", "raw": "{\"tarifa\":\"general\",\"cantidad\":0}"}},
+     "event": [{"listen": "test", "script": {"exec": ["pm.test('400', () => pm.response.to.have.status(400));"]}}]}
+  ]
+}
